@@ -1,0 +1,113 @@
+<style type="text/css">
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  body {
+    font: normal normal normal 78%/150% 'Yanone Kaffeesatz', sans-serif;
+    margin: 75px 0 0 0;
+    background-color: White;
+    /*
+    //https://css-tricks.com/almanac/properties/f/font-feature-settings/
+    -webkit-font-feature-settings: "lnum" 1;
+    -moz-font-feature-settings:    "lnum" 1;
+    -ms-font-feature-settings:     "lnum" 1;
+    font-feature-settings:         "lnum" 1;
+    */
+  }
+  .wrapper {
+    width: 650px;
+    margin: 0 auto;
+    padding: 25px;
+  }
+  h1 {
+    font: normal normal bold 220%/100% 'Yanone Kaffeesatz', sans-serif;
+    margin: 0 0 9px 0;
+  }
+  h1 span {
+    display: none;
+  }
+  a:link {
+    color: #86bc25;
+  }
+  a:visited {
+    color: #73a01e;
+  }
+  a:hover,
+  a:focus,
+  a:active {
+    color: #8fc625;
+  }
+  a.tel {
+    color: black;
+    text-decoration: none;
+  }
+  .contact,
+  .imprint,
+  .portfolio {
+    font-size: 160%;
+    padding-left: 90px;
+  }
+  .contact,
+  .portfolio {
+    margin-top: 70px;
+  }
+  .imprint {
+    margin-top: 0;
+  }
+  .imprint-text {
+    margin-top: 30px;
+  }
+  .portfolio {
+    font-size: 220%;
+    letter-spacing: 0.01em;
+  }
+  .portfolio .text-muted {
+    font-size: 76%;
+  }
+  .contact {
+    margin-top: 30px;
+  }
+  a.imprint-link:link,
+  a.imprint-link:visited,
+  a.imprint-link:hover,
+  a.imprint-link:focus,
+  a.imprint-link:active {
+    color: silver;
+  }
+  p {
+    line-height: 140%;
+  }
+  .achtelgeviert {
+    padding-right: 3px;
+  }
+  .bull {
+    margin: 0 3px;
+  }
+
+  /* Smartphones (portrait and landscape) */
+  /* thx @ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 480px) {
+    .wrapper {
+      width: 100%;
+      margin: 0;
+      padding: 25px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .contact {
+      padding: 0px;
+    }
+  }
+  .reset-font {
+    font-family: Arial, sans-serif;
+  }
+  .text-muted {
+    color: silver;
+  }
+</style>
