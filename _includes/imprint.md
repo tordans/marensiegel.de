@@ -9,7 +9,7 @@ Tel +49 30 67966653
 Registergericht: Amtsgericht Berlin Charlottenburg
 HRB 126785 B
 
-Ust-IdNr: beantragt
+Ust-IdNr: DE295005252
 
 ## Haftung für Inhalte
 
