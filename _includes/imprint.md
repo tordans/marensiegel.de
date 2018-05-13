@@ -1,10 +1,10 @@
 ## Impressum Maren Siegel
 
 Maren Siegel
-Mahlower Straße 15
-12049 Berlin
+Böhmische Straße 54
+12055 Berlin
 E-Mail m@marensiegel.de
-Tel +49 30 67966653
+Tel +49 30 56 82 83 95
 
 Registergericht: Amtsgericht Berlin Charlottenburg
 HRB 126785 B
