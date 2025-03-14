@@ -1,3 +1,10 @@
+---
+layout: ../components_maren/layout/Layout.astro
+noindex: true
+---
+
+<div class="imprint">
+
 ## Impressum Maren Siegel
 
 Maren Siegel
@@ -32,4 +39,6 @@ Sie können der Erhebung und Speicherung Ihrer Daten jederzeit <a href="http://t
 
 Diese Website benutzt Google Analytics mit der Zusatzfunktion „anonymizeIP()“. Dies bedeutet, dass IP-Adressen nicht vollständig, sondern nur gekürzt gespeichert und verarbeitet werden, um einen direkten Rückschluss auf die Person auszuschließen.
 
-*[Gratis Impressum](http://www.agb.de) von agb.de*
+_[Gratis Impressum](http://www.agb.de) von agb.de_
+
+</div>
