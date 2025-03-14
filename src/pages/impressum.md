@@ -7,10 +7,10 @@ noindex: true
 
 ## Impressum Maren Siegel
 
-Maren Siegel
-Böhmische Straße 54
-12055 Berlin
-E-Mail m@marensiegel.de
+Maren Siegel<br />
+Böhmische Straße 54<br />
+12055 Berlin<br />
+E-Mail m@marensiegel.de<br />
 Tel +49 30 56 82 83 95
 
 Registergericht: Amtsgericht Berlin Charlottenburg

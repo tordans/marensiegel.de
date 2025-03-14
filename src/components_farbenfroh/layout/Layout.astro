@@ -1,0 +1,39 @@
+---
+import '@fontsource-variable/crimson-pro'
+import Footer from './Footer.astro'
+import Header from './Header.astro'
+import './tailwind.css'
+
+type Props = { title: string; description?: string; noindex?: boolean }
+const { title, description, noindex } = Astro.props
+
+// const currentPath = Astro.url.pathname
+---
+
+<html lang="de" class="h-full antialiased">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui" />
+    <link rel="icon" href="/favicon-farbenfroh.svg" type="image/svg+xml" />
+
+    {noindex && <meta name="robots" content="noindex" />}
+    {description && <meta name="description" content={description} />}
+
+    <title>{title}</title>
+  </head>
+  <body class="flex h-full bg-zinc-50">
+    <div class="flex w-full">
+      <div class="fixed inset-0 flex justify-center sm:px-8">
+        <div class="flex w-full max-w-7xl lg:px-8">
+          <div class="w-full bg-white ring-1 ring-zinc-100"></div>
+        </div>
+      </div>
+      <div class="relative flex w-full flex-col">
+        <Header />
+        <main class="flex-auto"><slot /></main>
+        <Footer />
+      </div>
+    </div>
+  </body>
+</html>

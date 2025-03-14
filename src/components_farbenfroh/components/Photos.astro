@@ -1,0 +1,32 @@
+---
+import { Picture } from 'astro:assets'
+import { clsx } from 'clsx'
+
+const { image1, image2, image3, image4, image5 } = Astro.props
+const images = [image1, image2, image3, image4, image5].filter(Boolean)
+let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+---
+
+<div class="mt-16 sm:mt-20">
+  <div
+    class="-my-4 flex flex-wrap justify-center gap-5 overflow-hidden py-4 sm:gap-8 md:flex-nowrap"
+  >
+    {
+      images.map((image, imageIndex) => (
+        <div
+          class={clsx(
+            'relative aspect-9/10 w-36 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:rounded-2xl md:w-72',
+            rotations[imageIndex % rotations.length],
+          )}
+        >
+          <Picture
+            src={image}
+            alt=""
+            class="absolute inset-0 h-full w-full object-cover"
+            densities={[1.5, 2]}
+          />
+        </div>
+      ))
+    }
+  </div>
+</div>

@@ -1,0 +1,84 @@
+---
+import pngImage4 from '../../components_farbenfroh/assets/photo-ribbon/cat.jpg'
+import pngImage2 from '../../components_farbenfroh/assets/photo-ribbon/jellyfish.jpg'
+import pngImage1 from '../../components_farbenfroh/assets/photo-ribbon/lesezeichen.jpg'
+import pngImage5 from '../../components_farbenfroh/assets/photo-ribbon/pappmache.jpg'
+import pngImage3 from '../../components_farbenfroh/assets/photo-ribbon/zauberstab.jpg'
+import { Link } from '../../components_farbenfroh/components/Link'
+import Photos from '../../components_farbenfroh/components/Photos.astro'
+import { InstagramIcon, MailIcon } from '../../components_farbenfroh/components/SocialIcons'
+import Container from '../../components_farbenfroh/layout/Container.astro'
+import Layout from '../../components_farbenfroh/layout/Layout.astro'
+---
+
+<Layout title="Farbenfroh – Kreativ sein mit Maren Siegel">
+  <Container className="mt-12">
+    <div class="max-w-2xl">
+      <h1 class="text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl">
+        Kreativwerkstatt für Kinder von 4 – 10 Jahren
+      </h1>
+      <p class="mt-6 text-xl text-zinc-600">
+        Ob Malen, Filzen, Basteln oder Drucken – wir experimentieren mit unterschiedlichen
+        Materialien, dabei steht die Freude am Kreativsein im Vordergrund. Die Kinder dürfen sich
+        ausprobieren, ohne Bewertung des Endergebnisses, dadurch wird ihr Vertrauen in die eigenen
+        Fähigkeiten gestärkt. Ganz nebenbei werden Feinmotorik, Geduld und Konzentration trainiert
+        und ihr Selbstbewusstsein wächst.
+      </p>
+      <div class="mt-6 flex gap-6">
+        <Link
+          href="https://www.instagram.com/_farbenfroh"
+          className="group group -m-1 flex items-center gap-2 p-1 text-base leading-none font-medium text-zinc-800 transition hover:text-teal-500"
+        >
+          <InstagramIcon className="size-6 fill-zinc-500 transition group-hover:fill-zinc-600" /> Folgt
+          mir auf Instagram
+        </Link>
+        <Link
+          href="mailto:m@marensiegel.de"
+          className="group group -m-1 flex items-center gap-2 p-1 text-base leading-none font-medium text-zinc-800 transition hover:text-teal-500"
+        >
+          <MailIcon
+            className="size-6 fill-zinc-500 transition group-hover:fill-zinc-600"
+          />Anmeldung
+        </Link>
+      </div>
+    </div>
+  </Container>
+
+  <Photos
+    image1={pngImage1}
+    image2={pngImage2}
+    image3={pngImage3}
+    image4={pngImage4}
+    image5={pngImage5}
+  />
+
+  <Container className="mt-16">
+    <div class="max-w-2xl">
+      <p class="mt-6 text-xl text-zinc-600">
+        <strong>Wann?</strong> wöchentlich, donnerstags 16:15 – 17:00 Uhr
+      </p>
+      <p class="mt-6 text-xl text-zinc-600">
+        <strong>Wo?</strong> kleiner Raum links, <Link
+          href="https://maps.app.goo.gl/z7WRYtLHsDjXRyKJ8"
+          >Evangelische Brüdergemeine, Kirchgasse 14, 12043 Berlin</Link
+        >
+      </p>
+      <p class="mt-6 text-xl text-zinc-600">
+        <strong>Preise inklusive aller Materialien:</strong><br />
+        Schnupperkurs 5 €<br />
+        fortlaufender Kursbeitrag monatlich: 40 €<br />
+        Preis für 4 Kurse: 50 €<br />
+        Preis für 10 Kurse: 110 €<br />
+      </p>
+      <p class="mt-6 text-xl text-zinc-600">
+        <strong>Anmeldung per E-Mail an:</strong>
+        <Link href="mailto:m@marensiegel.de">m@marensiegel.de</Link> mit dem Namen des Kindes, Kurs-Option
+        und Startdatum
+      </p>
+      <p class="mt-6 text-xl text-zinc-600">
+        Kleine Kurse mit maximal 8 Kindern, der Einstieg ist jederzeit möglich. Die Kurse sind ohne
+        Elternbegleitung gedacht. In den Berliner Schulferien finden keine Kurse statt.
+      </p>
+    </div>
+  </Container>
+</Layout>
