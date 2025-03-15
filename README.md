@@ -1,11 +1,6 @@
 # marensiegel.de
 
-Jekyll Website for Maren Siegel.
-
-# Notizen
-
-- `jekyll serve`
-- `jekyll build`
+Astro Website for Maren Siegel and Projekt Farbenfroh.
 
 # Domain
 
