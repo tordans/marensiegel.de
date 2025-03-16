@@ -1,5 +1,9 @@
 ---
+import LogoSvg from '../components_farbenfroh/assets/farbenfroh-logo.svg'
+import ContactInfo from '../components_maren/ContactInfo.astro'
+import Footer from '../components_maren/Footer.astro'
 import Hero from '../components_maren/Hero.astro'
+import Hr from '../components_maren/Hr.astro'
 import Layout from '../components_maren/layout/Layout.astro'
 
 const title = 'Maren Siegel • Packaging, Corporate & Grafik Design'
@@ -10,4 +14,17 @@ const description = `
 
 <Layout title={title} description={description}>
   <Hero />
+  <ContactInfo />
+
+  <Hr />
+  <a
+    href="/farbenfroh"
+    class="flex items-center justify-center gap-2 rounded p-4 text-4xl hover:bg-zinc-50"
+  >
+    Zu
+    <LogoSvg class="inline-block max-h-28" />
+  </a>
+  <Hr />
+
+  <Footer />
 </Layout>

@@ -1,0 +1,22 @@
+---
+import ContactInfo from '../ContactInfo.astro'
+import Footer from '../Footer.astro'
+import Hero from '../Hero.astro'
+import Hr from '../Hr.astro'
+import Layout from './Layout.astro'
+
+type Props = { title: string; description?: string; noindex?: boolean; prose?: boolean }
+const { title, description, noindex, prose = true } = Astro.props
+---
+
+<Layout title={title} description={description} noindex={noindex}>
+  <Hero />
+  <ContactInfo />
+  <Hr />
+
+  <div class="prose prose-green prose-lg mt-10">
+    <slot />
+  </div>
+
+  <Footer />
+</Layout>

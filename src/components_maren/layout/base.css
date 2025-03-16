@@ -1,3 +1,6 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
 body {
   font-family: 'Yanone Kaffeesatz Variable', sans-serif;
 }
@@ -60,14 +63,9 @@ a.tel {
 }
 
 .contact,
-.imprint,
 .portfolio {
   font-size: 160%;
   padding-left: 90px;
-}
-
-.contact,
-.portfolio {
   margin-top: 70px;
 }
 
@@ -82,14 +80,6 @@ a.tel {
 
 .contact {
   margin-top: 30px;
-}
-
-a.imprint-link:link,
-a.imprint-link:visited,
-a.imprint-link:hover,
-a.imprint-link:focus,
-a.imprint-link:active {
-  color: silver;
 }
 
 p {

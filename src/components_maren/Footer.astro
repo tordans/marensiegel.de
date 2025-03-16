@@ -1,0 +1,15 @@
+---
+const currentPath = Astro.url.pathname
+---
+
+{
+  currentPath !== '/impressum' && (
+    <div class="contact">
+      <p>
+        <a href="/impressum" class="imprint-link">
+          Impressum
+        </a>
+      </p>
+    </div>
+  )
+}

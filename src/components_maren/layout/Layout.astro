@@ -1,12 +1,9 @@
 ---
 import '@fontsource-variable/yanone-kaffeesatz'
-import ContactInfo from '../ContactInfo.astro'
 import './base.css'
 
 type Props = { title: string; description?: string; noindex?: boolean }
 const { title, description, noindex } = Astro.props
-
-const currentPath = Astro.url.pathname
 ---
 
 <!doctype html>
@@ -26,19 +23,6 @@ const currentPath = Astro.url.pathname
       <article>
         <slot />
       </article>
-
-      {
-        currentPath !== '/impressum' && (
-          <div class="contact">
-            <ContactInfo />
-            <p>
-              <a href="/impressum" class="imprint-link">
-                Impressum
-              </a>
-            </p>
-          </div>
-        )
-      }
     </div>
   </body>
 </html>
