@@ -5,7 +5,7 @@
 @config './typography.ts';
 
 @theme {
-  --font-sans: 'Crimson Pro Variable', sans-serif;
+  --font-sans: 'STIX Two Text Variable', sans-serif;
 
   /* Tailwind Plus Spotlight: */
   --text-xs: 0.8125rem;
