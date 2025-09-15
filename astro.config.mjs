@@ -39,10 +39,6 @@ export default defineConfig({
   output: ASTRO_OUTPUT_MODE,
   adapter: ASTRO_USE_NETLIFY_ADAPTER === 'true' ? netlify() : undefined,
   redirects: {},
-  experimental: {
-    // https://docs.astro.build/en/reference/experimental-flags/svg/
-    svg: true,
-  },
   // markdown: { remarkPlugins: [remarkToc] },
   vite: {
     plugins: [tailwindcss()],
