@@ -1,23 +1,10 @@
-/** @type {import("prettier").Config} */
+/** Prettier is kept only for `.astro` / `.mdx` until Oxfmt supports Astro templates. */
+/** @type {import('prettier').Config} */
 export default {
   semi: false,
   singleQuote: true,
   arrowParens: 'always',
   printWidth: 100,
-  plugins: [
-    'prettier-plugin-astro',
-    'prettier-plugin-organize-imports',
-    'prettier-plugin-tailwindcss',
-    'prettier-plugin-astro-organize-imports',
-  ],
-  overrides: [
-    {
-      files: '*.astro',
-      options: {
-        parser: 'astro',
-      },
-    },
-  ],
-  tailwindFunctions: ['clsx'],
-  tailwindAttributes: ['className', 'class:list', 'class'],
+  plugins: ['prettier-plugin-astro'],
+  overrides: [{ files: '*.astro', options: { parser: 'astro' } }],
 }

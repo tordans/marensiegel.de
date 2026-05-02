@@ -27,7 +27,11 @@ export default defineConfig({
   site: 'https://www.marensiegel.de/',
   integrations: [
     ASTRO_OUTPUT_MODE === 'static' ? undefined : keystatic(),
-    react(),
+    react({
+      babel: {
+        plugins: ['babel-plugin-react-compiler'],
+      },
+    }),
     mdx(),
     sitemap({
       filter: (page) => !page.includes('portfolio'),
