@@ -4,7 +4,7 @@ import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import keystatic from '@keystatic/astro'
 import tailwindcss from '@tailwindcss/vite'
-import { defineConfig, envField } from 'astro/config'
+import { defineConfig, envField, fontProviders } from 'astro/config'
 
 // ABOUT:
 // We have to fetch settings from `.env`
@@ -25,6 +25,27 @@ const { ASTRO_OUTPUT_MODE, ASTRO_USE_NETLIFY_ADAPTER } = loadEnv(
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.marensiegel.de/',
+  // https://docs.astro.build/en/guides/fonts/
+  fonts: [
+    {
+      provider: fontProviders.fontsource(),
+      name: 'STIX Two Text',
+      cssVariable: '--font-stix-two-text',
+      weights: [400, 500, 600, 700],
+      styles: ['normal', 'italic'],
+      subsets: ['latin', 'latin-ext'],
+      fallbacks: ['serif'],
+    },
+    {
+      provider: fontProviders.fontsource(),
+      name: 'Yanone Kaffeesatz',
+      cssVariable: '--font-yanone-kaffeesatz',
+      weights: [200, 300, 400, 500, 600, 700],
+      styles: ['normal'],
+      subsets: ['latin', 'latin-ext'],
+      fallbacks: ['sans-serif'],
+    },
+  ],
   integrations: [
     ASTRO_OUTPUT_MODE === 'static' ? undefined : keystatic(),
     react({

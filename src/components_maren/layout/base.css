@@ -2,7 +2,7 @@
 @plugin '@tailwindcss/typography';
 
 body {
-  font-family: 'Yanone Kaffeesatz Variable', sans-serif;
+  font-family: var(--font-yanone-kaffeesatz);
 }
 
 * {
@@ -13,7 +13,7 @@ body {
 
 body {
   font:
-    normal normal normal 78%/150% 'Yanone Kaffeesatz Variable',
+    normal normal normal 78%/150% var(--font-yanone-kaffeesatz),
     sans-serif;
   margin: 75px 0 0 0;
   background-color: White;
@@ -34,7 +34,7 @@ body {
 
 h1 {
   font:
-    normal normal bold 220%/100% 'Yanone Kaffeesatz Variable',
+    normal normal bold 220%/100% var(--font-yanone-kaffeesatz),
     sans-serif;
   margin: 0 0 9px 0;
 }

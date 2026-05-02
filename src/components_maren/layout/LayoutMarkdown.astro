@@ -6,7 +6,7 @@ import Hr from '../Hr.astro'
 import Layout from './Layout.astro'
 
 type Props = { title: string; description?: string; noindex?: boolean; prose?: boolean }
-const { title, description, noindex, prose = true } = Astro.props
+const { title, description, noindex } = Astro.props
 ---
 
 <Layout title={title} description={description} noindex={noindex}>

@@ -28,8 +28,6 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
-    "@fontsource-variable/stix-two-text": "^5.2.8",
-    "@fontsource-variable/yanone-kaffeesatz": "^5.2.7",
     "@headlessui/react": "^2.2.10",
     "@keystatic/core": "^0.5.50",
     "astro": "^6.2.1",
