@@ -48,11 +48,7 @@ export default defineConfig({
   ],
   integrations: [
     ASTRO_OUTPUT_MODE === 'static' ? undefined : keystatic(),
-    react({
-      babel: {
-        plugins: ['babel-plugin-react-compiler'],
-      },
-    }),
+    react({ compiler: true }),
     mdx(),
     sitemap({
       filter: (page) => !page.includes('portfolio'),
