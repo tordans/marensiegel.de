@@ -1,3 +1,5 @@
+import { homedir } from 'node:os'
+import { join } from 'node:path'
 import mdx from '@astrojs/mdx'
 import netlify from '@astrojs/netlify'
 import react from '@astrojs/react'
@@ -14,7 +16,7 @@ import { defineConfig, envField, fontProviders } from 'astro/config'
 // `bun run dev` uses hybrid mode and keystatic()
 // `bun run build` (server) is based on .env and has different settings for Netlify (CMS/Keystatic) vs. Github Pages (Static site)
 // `bun run build:local && bun run preview` overwrites the .env settings to have a local test case for what is on Github Pages
-import { loadEnv } from 'vite'
+import { loadEnv, searchForWorkspaceRoot } from 'vite'
 const { ASTRO_OUTPUT_MODE, ASTRO_USE_NETLIFY_ADAPTER } = loadEnv(
   process.env.NODE_ENV,
   process.cwd(),
@@ -63,6 +65,12 @@ export default defineConfig({
   // markdown: { remarkPlugins: [remarkToc] },
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      fs: {
+        // Bun global store (bunfig.toml): packages live in ~/.bun/install/cache/links
+        allow: [searchForWorkspaceRoot(process.cwd()), join(homedir(), '.bun/install/cache/links')],
+      },
+    },
   },
   env: {
     schema: {
